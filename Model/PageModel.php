@@ -7,13 +7,10 @@ class PageModel
 	/********************************************SETTERS*********************************/
 	public function setPageAddress($PageAddress){$this->PageAddress=$PageAddress;}
 	public function setFriendlyName($FriendlyName){$this->FriendlyName=$FriendlyName;}
-	public function setName($Name){$this->Name=$Name;}
-	public function setPassword($Password){$this->Password=$Password;}
 
 	/********************************************GETTERS*********************************/
 	public function getPageAddress(){return $this->PageAddress;}
 	public function getFriendlyName(){return $this->FriendlyName;}
-	public function getID(){return $this->userTypeID;}
 	
 	/********************************************FUNCTIONS*********************************/
 	public function addPage()
