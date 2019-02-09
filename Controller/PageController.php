@@ -4,7 +4,7 @@ if(isset($_POST['addPage']))
 {
 	$PageController=new PageController();
 	$PageController->addPage();
-	header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . "/Software/Assign1/View/AddPage.php"); //returns to the source page
+	header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . "/Assign1/View/AddPage.php"); //returns to the source page
 }
 else if(isset($_POST['addUser']))
 {
