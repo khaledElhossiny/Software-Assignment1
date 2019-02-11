@@ -1,6 +1,6 @@
 <?php
 require_once("../Public/Database/DB.php");
-class userTypeModel
+class UserTypeModel
 {
 	private $userTypeID,$usertype;
 	
@@ -47,7 +47,7 @@ class userTypeModel
         $DBConnect->connect();
         $DBConnect->execute($sql);
     }
-    public function delete()
+    public function del()
     {
         $sql="DELETE FROM `usertype` WHERE `UserTypeId`= ".$this->userTypeID."";
         //echo $sql;
