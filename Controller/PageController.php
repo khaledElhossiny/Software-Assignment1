@@ -12,12 +12,6 @@ else if(isset($_POST['edit']))
     $PageController->edit($_POST['id'],$_POST['pageAdrs'],$_POST['friendlyName']);
     header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . "/Assign1/View/EditPage.php"); //returns to the source page
 }
-else if(!empty($_GET['id']))
-{
-    $PageController=new PageController();
-    $PageController->delete($_GET['id']);
-    //header("Location: " . "http://" . $_SERVER['HTTP_HOST'] . "/Assign1/View/DeletePage.php"); //returns to the source page
-}
 class PageController
 {
 	public function addPage()
@@ -27,6 +21,12 @@ class PageController
 		$PageModel->setFriendlyName($_POST['friendlyName']);
 		$PageModel->addPage();
 	}
+    public function searchAll()
+    {
+        $PageModel = new PageModel();
+        $result=$PageModel->searchAll();
+        return $result;
+    }
 	public function search($str)
     {
         $PageModel = new PageModel();
@@ -49,11 +49,11 @@ class PageController
         $PageModel->setFriendlyName($name);
         $PageModel->edit();
     }
-    public function delete($id)
+    public function del($id)
     {
         $PageModel = new PageModel();
         $PageModel->setPageID($id);
-        $PageModel->delete();
+        $PageModel->del();
     }
 }
 ?>
