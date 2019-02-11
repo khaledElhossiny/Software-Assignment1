@@ -31,7 +31,7 @@
                     ."<td>".$rows['PageId']."</td>"
                     ."<td>".$rows['PhysicalAdrs']."</td>"
                     ."<td>".$rows['FriendlyName']."</td>"
-                    ."<td>".'<a href="ApplyEdit.php?id='.$rows['PageId'].'">edit</a>'."</td>"
+                    ."<td>".'<a href="ApplyPageEdit.php?id='.$rows['PageId'].'">edit</a>'."</td>"
                     ."</tr>";
             }
             echo "</table>";
