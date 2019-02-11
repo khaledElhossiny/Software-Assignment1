@@ -31,7 +31,7 @@
                     ."<td>".$rows['Id']."</td>"
                     ."<td>".$rows['Name']."</td>"
                     ."<td>".$rows['Password']."</td>"
-					."<td>".$rows['UserTypeId']."</td>"
+		    ."<td>".$rows['UserTypeId']."</td>"
                     ."</tr>";
             }
             echo "</table>";
