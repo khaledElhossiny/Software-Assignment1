@@ -31,7 +31,7 @@
                     ."<td>".$rows['PageId']."</td>"
                     ."<td>".$rows['PhysicalAdrs']."</td>"
                     ."<td>".$rows['FriendlyName']."</td>"
-                    ."<td>".'<a href="../Controller/PageController.php?id='.$rows['PageId'].'">Delete</a>'."</td>"
+                    ."<td>".'<a href="ApplyPageDelete.php?id='.$rows['PageId'].'">Delete</a>'."</td>"
                     ."</tr>";
             }
             echo "</table>";
