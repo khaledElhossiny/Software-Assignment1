@@ -8,11 +8,11 @@
         </form>
     </div>
     <?php
-    require_once("../Controller/userController.php");
+    require_once("../Controller/UserController.php");
     if(!empty($_POST['search']))
     {
-        $userControllerObject=new userController();
-        $result=$userControllerObject->search($_POST['Name']);
+        $UserControllerObject=new UserController();
+        $result=$UserControllerObject->search($_POST['Name']);
         if(mysqli_num_rows($result)>0)
         {
             //display header
@@ -20,7 +20,7 @@
             "<table border='1' id='page_table'>
 				    <form action=''>
 					    <tr bgcolor='#CCCCCC'>
-						    <td>ID</td> <td>name</td>
+						    <td>ID</td> <td>Name</td> <td>Password</td> <td>UserTypeID</td>
 					    </tr>";
 
             while($rows=mysqli_fetch_array($result))
@@ -30,7 +30,8 @@
                     "<tr>"
                     ."<td>".$rows['Id']."</td>"
                     ."<td>".$rows['Name']."</td>"
-                    
+                    ."<td>".$rows['Password']."</td>"
+					."<td>".$rows['UserTypeId']."</td>"
                     ."</tr>";
             }
             echo "</table>";
