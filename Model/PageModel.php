@@ -23,6 +23,15 @@ class PageModel
 		$DBConnect->connect();
 		$DBConnect->execute($sql);
 	}
+    public function searchAll()
+    {
+        $sql="SELECT * FROM `pages`";
+        echo $sql;
+        $DBConnect=new Database();
+        $DBConnect->connect();
+        $result=$DBConnect->execute($sql);
+        return $result;
+    }
     public function search()
     {
         $sql="SELECT * FROM `pages` WHERE FriendlyName LIKE '%".$this->FriendlyName."%' ";
@@ -49,7 +58,7 @@ class PageModel
         $DBConnect->connect();
         $DBConnect->execute($sql);
     }
-    public function delete()
+    public function del()
     {
         $sql="DELETE FROM `pages` WHERE `PageId`= ".$this->PageID."";
         echo $sql;
