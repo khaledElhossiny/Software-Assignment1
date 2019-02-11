@@ -8,11 +8,11 @@
         </form>
     </div>
     <?php
-    require_once("../Controller/userController.php");
+    require_once("../Controller/UserController.php");
     if(!empty($_POST['search']))
     {
-        $userControllerObject=new userController();
-        $result=$userControllerObject->search($_POST['Name']);
+        $UserControllerObject=new UserController();
+        $result=$UserControllerObject->search($_POST['Name']);
         if(mysqli_num_rows($result)>0)
         {
             //display header
@@ -31,7 +31,7 @@
                     ."<td>".$rows['Id']."</td>"
                     ."<td>".$rows['Name']."</td>"
                     
-                    ."<td>".'<a href="../Controller/userController.php?id='.$rows['Id'].'">Delete</a>'."</td>"
+                    ."<td>".'<a href="ApplyUserDelete.php?id='.$rows['Id'].'">Delete</a>'."</td>"
                     ."</tr>";
             }
             echo "</table>";
